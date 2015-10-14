@@ -3,6 +3,10 @@ class Post < ActiveRecord::Base
   before_create :gen_content
   before_save :upcase_all
 
+  def to_s
+    title
+  end
+
   protected
   def gen_content
     self.content = title if content.blank?
