@@ -1,0 +1,9 @@
+title: <%= @post.title %>
+
+<br>
+content:<%= @post.content %>
+
+
+<hr>
+<%= link_to 'edit post', edit_post_path(@post) %>
+<%= link_to 'back to index', posts_path %>
