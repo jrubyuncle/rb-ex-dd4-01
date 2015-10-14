@@ -10,3 +10,13 @@
   <br>content: <%= text_field_tag 'post[content]' %>
   <%= submit_tag %>
 <% end %>
+
+
+<hr>
+Use form_for
+<br>
+<%= form_for @post do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
