@@ -13,7 +13,8 @@ class PostsController < ApplicationController
 
   def create
 
-    p = Post.new title: params[:title], content: params[:content]
+    #p = Post.new title: params[:title], content: params[:content]
+    p = Post.new params[:post].to_hash
 
     if p.save
       redirect_to post_path(p)

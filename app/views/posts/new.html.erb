@@ -1,9 +1,12 @@
 <%= form_tag posts_path do %>
+  title: <%= text_field_tag :title %>
+  <br>content: <%= text_field_tag :content %>
+  <%= submit_tag %>
+<% end %>
 
-title: <%= text_field_tag :title %>
-
-
-<br>content: <%= text_field_tag :content %>
-
-<%= submit_tag %>
+<hr>
+<%= form_tag posts_path do %>
+  title: <%= text_field_tag 'post[title]' %>
+  <br>content: <%= text_field_tag 'post[content]' %>
+  <%= submit_tag %>
 <% end %>
